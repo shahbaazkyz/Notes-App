@@ -9,7 +9,7 @@ This application is inspiration from the tutorial of [Andrew mead](https://githu
               
 * Run _node app.js remove --title="some title"_        
            
-**Modules used**     
+**Modules used**      
 * File system
 * Chalk
 * Yargs
