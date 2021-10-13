@@ -8,7 +8,7 @@ This application is inspiration from the tutorial of [Andrew mead](https://githu
 **For Removing Note**                   
              
 * Run _node app.js remove --title="some title"_     
-     
+      
 **Modules used**  
 * File system
 * Chalk
