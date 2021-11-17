@@ -5,7 +5,7 @@ This application is inspiration from the tutorial of [Andrew mead](https://githu
   
 * Run _node app.js add --title="some title" --body="some body"_  
  
-**For Removing Note**     
+**For Removing Note**      
       
 * Run _node app.js remove --title="some title"_
   
