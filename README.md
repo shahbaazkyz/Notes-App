@@ -3,7 +3,7 @@ This application is inspiration from the tutorial of [Andrew mead](https://githu
  
 **For adding note**    
   
-* Run _node app.js add --title="some title" --body="some body"_ 
+* Run _node app.js add --title="some title" --body="some body"_  
  
 **For Removing Note**     
       
