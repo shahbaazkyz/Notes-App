@@ -43,7 +43,6 @@ yargs.command({
 });
 
 // List command
-
 yargs.command({
   command: "list",
   describe: "Listing items!",
@@ -63,7 +62,7 @@ yargs.command({
       demandOption: true,
       type: "string",
     },
-  },
+  },  
   handler(argv) {
    notes.readNote(argv.title)
   },
