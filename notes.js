@@ -68,7 +68,6 @@ const updateNotes = (notes) => {
 };
 
 // Loading Notes
-
 const loadNotes = () => {
   try {
     const receivedJSON = fs.readFileSync("notes.json");
