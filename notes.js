@@ -62,7 +62,6 @@ const listNotes = () => {
 };
 
 // Update Note
-
 const updateNotes = (notes) => {
   const jsonData = JSON.stringify(notes);
   fs.writeFileSync("notes.json", jsonData);
