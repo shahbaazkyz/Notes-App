@@ -48,7 +48,6 @@ const readNote = (a) => {
 };
 
 // List Notes
-
 const listNotes = () => {
   const data = loadNotes();
   console.log(chalk.bgGreen.white.bold("Your Notes"));
