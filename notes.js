@@ -20,7 +20,6 @@ const addNote = (title, body) => {
 };
 
 // Remove Note
-
 const removeNote = (title) => {
   const data = loadNotes();
 
