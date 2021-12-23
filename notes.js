@@ -1,17 +1,15 @@
 const fs = require("fs");
 const chalk = require("chalk");
 
-function getNotes(note) {
+const getNotes = (note) => {
   return "This is note : " + note;
 }
 
 // Adding Notes
-function addNote(title, body) {
+const  addNote = (title, body) => {
   const data = loadNotes();
 
-  const checkDuplicate = data.filter(function (note) {
-    return note.title === title;
-  });
+  const checkDuplicate = data.filter( (note) =>  note.title === title);
   if (checkDuplicate.length === 0) {
     data.push({
       title: title,
@@ -27,7 +25,7 @@ function addNote(title, body) {
 
 // Remove Note
 
-function removeNote(title) {
+const removeNote = (title) => {
   const data = loadNotes();
 
   const checkTitle = data.some((note) => note.title === title);
@@ -44,16 +42,29 @@ function removeNote(title) {
     }
 }
 
+// List Notes
+
+const listNotes = () => {
+  const data = loadNotes();
+  console.log(chalk.bgGreen.white.bold("Your Notes"));
+  data.forEach(element => {
+    console.log(
+      chalk.bold("Title : ") + element.title + chalk.bold(" , Body : ") + element.body
+    );
+  });
+  
+}
+
 // Update Note
 
-function updateNotes(notes) {
+const updateNotes = (notes) => {
   const jsonData = JSON.stringify(notes);
   fs.writeFileSync("notes.json", jsonData);
 }
 
 // Loading Notes
 
-function loadNotes() {
+const loadNotes = () => {
   try {
     const receivedJSON = fs.readFileSync("notes.json");
     const stringJSON = receivedJSON.toString();
@@ -63,4 +74,4 @@ function loadNotes() {
   }
 }
 
-module.exports = { getNotes, addNote, removeNote };
+module.exports = { getNotes, addNote, removeNote , listNotes };
